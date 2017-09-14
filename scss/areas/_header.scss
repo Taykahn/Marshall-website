@@ -4,14 +4,30 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-color: #ccc;
 }
 
 .site-name {
 	text-align: center;
-	color: #fff;
+	color: #000;
 	h1 {
 		margin-top: 0px;
-		padding-top: 4em;
 		font-size: 4em;
+	}
+}
+
+@media ( min-width: 320px ) {
+	.site-name {
+		h1 {
+			padding-top: 4em;
+		}
+	}
+}
+
+@media ( min-width: 768px ) {
+	.site-name {
+		h1 {
+			padding-top: 5em;
+		}
 	}
 }

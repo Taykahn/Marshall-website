@@ -11,6 +11,8 @@ $post_id = $post->ID;
 
 ?>
 
+<div id="nav-change">
+
 	<div class="container">
 
 		<div class="row">
@@ -21,7 +23,7 @@ $post_id = $post->ID;
 
 					<h1><?php the_title(); ?></h1>
 
-				</div><!-- end page-header -->
+				</div><!-- end page-header --><hr>
 
 				<?php if( have_rows( 'portfolio', $post_id ) ): ?>
 
@@ -66,5 +68,7 @@ $post_id = $post->ID;
 		</div><!-- end row -->
 
 	</div><!-- end container -->
+
+</div><!-- end nav-change -->
 
 <?php get_footer(); ?>

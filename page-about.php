@@ -5,6 +5,8 @@
 
 get_header(); ?>
 
+<div id="nav-change">
+
 	<div class="container">
 
 		<div class="row">
@@ -50,5 +52,7 @@ get_header(); ?>
 		</div><!-- end row -->
 
 	</div><!-- end container -->
+
+</div><!-- end nav-change -->
 
 <?php get_footer(); ?>

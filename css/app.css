@@ -217,7 +217,7 @@ body {
   font: 400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
 
 #contact {
-  background: #F9F9F9;
+  background: rgba(249, 249, 249, 0.72);
   padding: 25px; }
 
 #contact h3 {
@@ -325,7 +325,7 @@ fieldset {
   font-weight: bold; }
 
 .navbar-default .navbar-nav > li > a {
-  color: #fff; }
+  color: #000; }
 
 .sub-menu li {
   margin-bottom: 10px;
@@ -346,7 +346,7 @@ fieldset {
   font-weight: bold; }
 
 #menu-menu-1 a:hover {
-  color: #fff; }
+  color: #339eff; }
 
 .navbar-inverse
 .navbar-nav > li > a {
@@ -363,7 +363,7 @@ fieldset {
 
 .current-menu-item > a,
 .current-menu-parent > a {
-  background: #424C50;
+  background: #ccc;
   -webkit-border-radius: 5px;
      -moz-border-radius: 5px;
           border-radius: 5px; }
@@ -384,9 +384,9 @@ fieldset {
   -webkit-border-radius: 0px;
      -moz-border-radius: 0px;
           border-radius: 0px;
-  -webkit-box-shadow: 0px 3px 14px #000;
-     -moz-box-shadow: 0px 3px 14px #000;
-          box-shadow: 0px 3px 14px #000; }
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none; }
 
 .navbar-default .navbar-collapse {
   border-color: rgba(255, 255, 255, 0);
@@ -404,8 +404,8 @@ fieldset {
 
 @media (min-width: 768px) {
   .navbar-default .navbar-collapse {
-    border-color: #2B2F31;
-    background-color: #2B2F31; }
+    border-color: rgba(43, 47, 49, 0);
+    background-color: rgba(43, 47, 49, 0); }
   .navbar
 .navbar-collapse {
     text-align: left;
@@ -436,15 +436,23 @@ fieldset {
   -webkit-background-size: cover;
      -moz-background-size: cover;
        -o-background-size: cover;
-          background-size: cover; }
+          background-size: cover;
+  background-color: #ccc; }
 
 .site-name {
   text-align: center;
-  color: #fff; }
+  color: #000; }
   .site-name h1 {
     margin-top: 0px;
-    padding-top: 4em;
     font-size: 4em; }
+
+@media (min-width: 320px) {
+  .site-name h1 {
+    padding-top: 4em; } }
+
+@media (min-width: 768px) {
+  .site-name h1 {
+    padding-top: 5em; } }
 
 .copyright p {
   background-color: #4E5456;
@@ -481,9 +489,95 @@ fieldset {
   padding-left: 0px;
   padding-right: 0px; }
 
+.parallax {
+  min-height: 300px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+  background-color: #ccc; }
+
+.portfolio-section-header h1 {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 50px;
+  color: #fff; }
+
+.port-container {
+  padding-top: 1em;
+  padding-bottom: 2em; }
+
+/* entire container, keeps perspective */
+.flip-container {
+  -webkit-perspective: 1000px;
+     -moz-perspective: 1000px;
+          perspective: 1000px; }
+
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  -webkit-transform: rotateY(180deg);
+     -moz-transform: rotateY(180deg);
+          transform: rotateY(180deg); }
+
+/* flip speed goes here */
+.flipper {
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  -moz-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: relative; }
+
+/* hide back of pane during swap */
+.front, .back {
+  -webkit-backface-visibility: hidden;
+     -moz-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  -webkit-transform: rotateY(0deg);
+     -moz-transform: rotateY(0deg);
+          transform: rotateY(0deg); }
+
+/* back, initially hidden pane */
+.back {
+  -webkit-transform: rotateY(180deg);
+     -moz-transform: rotateY(180deg);
+          transform: rotateY(180deg); }
+
+@media (min-width: 320px) {
+  .parallax {
+    min-height: 135px; }
+  .portfolio-section-header h1 {
+    padding-top: 34px; }
+  .flip-container, .front, .back {
+    height: 18em; } }
+
+@media (min-width: 768px) {
+  .section-1 {
+    padding-top: 5em;
+    padding-bottom: 5em; }
+  .parallax {
+    min-height: 300px; }
+  .portfolio-section-header h1 {
+    padding-top: 2em; }
+  .flip-container, .front, .back {
+    height: 26em; } }
+
 .about-page-header {
   padding-bottom: 9px;
-  padding-top: 1em;
   margin: 40px 0 20px;
   border-bottom: 1px solid #eeeeee; }
   .about-page-header h1 {
@@ -501,21 +595,30 @@ fieldset {
   margin-left: 0px;
   margin-right: 0px; }
 
-.portfolio-page-header {
-  padding-bottom: 9px;
-  padding-top: 1em;
-  margin: 40px 0 20px;
-  border-bottom: 1px solid #eeeeee; }
-  .portfolio-page-header h1 {
-    text-align: center; }
+#portfolio {
+  background-color: #969B98; }
+
+.portfolio-page-header h1 {
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em; }
 
 .portfolio-title h2 {
   text-align: center; }
 
-.portfolio-img img {
-  width: 100%; }
-
 .web-content {
   padding-bottom: 1em; }
+
+@media (min-width: 320px) {
+  .portfolio-img {
+    text-align: center; }
+    .portfolio-img img {
+      width: 100%; } }
+
+@media (min-width: 768px) {
+  .portfolio-img {
+    text-align: center; }
+    .portfolio-img img {
+      width: 100%; } }
 
 /*# sourceMappingURL=app.css.map */

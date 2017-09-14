@@ -11,6 +11,8 @@ $post_id = $post->ID;
 
 ?>
 
+<div id="nav-change">
+
 	<div class="container">
 
 		<div class="banner no-pad" style="background: url( '<?php the_field( 'contact_img', $post_id ); ?>' ) 50%/cover no-repeat;">
@@ -26,5 +28,7 @@ $post_id = $post->ID;
 		</div><!-- end row -->
 
 	</div><!-- end container -->
+
+</div><!-- end nav-change -->
 
 <?php get_footer(); ?>
