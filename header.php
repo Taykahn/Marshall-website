@@ -23,7 +23,7 @@
 
 	<!-- Google Fonts -->
 
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Oswald|Arsenal" rel="stylesheet">
 
 	<?php wp_head() ?>
 
@@ -39,6 +39,8 @@
 	</head>
 
 <body <?php body_class( $classes ) ?>>
+
+<div id="top">
 
 	<nav class="navbar navbar-default navbar-fixed-top">
 
@@ -74,6 +76,8 @@
 			</div><!--/.navbar-collapse -->
 
 	</nav><!-- end navbar navbar-inverse navbar-fixed-top -->
+
+</div><!-- end top -->
 
 	<header>
 

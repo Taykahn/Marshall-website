@@ -7,7 +7,7 @@ get_header(); ?>
 
 <div id="nav-change">
 
-	<div class="container">
+	<div class="container about-page">
 
 		<div class="row">
 

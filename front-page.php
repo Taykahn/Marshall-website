@@ -87,6 +87,12 @@ $post_id = $post->ID;
 
 			<h1>Portfolio</h1>
 
+			<div class="port-chev">
+
+				<a href="#portfolio"><img src="<?php the_field( 'port_chev', 'option' ) ?>"></a>
+
+			</div>
+
 		</div><!-- end page-header -->
 
 	</div><!-- end parallax -->
@@ -99,7 +105,7 @@ $post_id = $post->ID;
 
 		<div class="row">
 
-			<div class="col-md-12">
+			<div class="col-md-12 stupid-crap">
 
 				<?php if( have_rows( 'portfolio', $post_id ) ): ?>
 
@@ -112,12 +118,6 @@ $post_id = $post->ID;
 							<div class="flipper">
 
 								<div class="front">
-
-									<div class="portfolio-title">
-
-										<h2><?php the_sub_field( 'title', $post_id ); ?></h2>
-
-									</div><!-- end portfolio-title -->
 
 									<div class="portfolio-img">
 

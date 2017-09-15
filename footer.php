@@ -8,6 +8,14 @@
 
 	<footer class="footer">
 
+		<?php if ( is_front_page() ) { ?>
+
+			<a href="#top"><img src="<?php the_field( 'arrow_up', 'option' ) ?>"></a>
+
+		<?php } else { ?>
+
+		<?php } ?>
+
 		<section class="one-column row no-pad">
 
 			<div class="copyright">
@@ -21,8 +29,7 @@
 	</footer><!-- end footer -->
 
 	<?php wp_footer(); ?>
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+
 </body>
 
 </html>

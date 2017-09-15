@@ -192,9 +192,15 @@
   src: url("../fonts/Geometria-Light.woff") format("woff"), url("../fonts/Geometria-Light.woff2") format("woff2"); }
 
 body {
-  font-family: serif, 'Open+Sans';
+  font-family: 'Oswald', 'Arsenal';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+h1, h2, h3, h4 {
+  font-family: oswald; }
+
+p {
+  font-family: arsenal; }
 
 .contact-form {
   max-width: 400px;
@@ -306,6 +312,9 @@ fieldset {
 .navbar-collapse {
   text-align: center; }
 
+.navbar-collapse.in {
+  overflow-y: visible; }
+
 .navbar-toggle {
   margin-right: 26px; }
 
@@ -388,6 +397,9 @@ fieldset {
      -moz-box-shadow: none;
           box-shadow: none; }
 
+.container > .navbar-collapse {
+  padding-left: 6em; }
+
 .navbar-default .navbar-collapse {
   border-color: rgba(255, 255, 255, 0);
   background-color: rgba(119, 119, 119, 0.68); }
@@ -402,10 +414,15 @@ fieldset {
     padding: 0px;
     margin: 0px; } }
 
+@media (min-width: 320px) {
+  .navbar-default .navbar-collapse {
+    margin-top: -4em; } }
+
 @media (min-width: 768px) {
   .navbar-default .navbar-collapse {
     border-color: rgba(43, 47, 49, 0);
-    background-color: rgba(43, 47, 49, 0); }
+    background-color: rgba(43, 47, 49, 0);
+    margin-top: 0px; }
   .navbar
 .navbar-collapse {
     text-align: left;
@@ -454,6 +471,13 @@ fieldset {
   .site-name h1 {
     padding-top: 5em; } }
 
+.footer {
+  background-color: #4E5456; }
+  .footer img {
+    padding-top: 1em;
+    display: block;
+    margin: 0 auto; }
+
 .copyright p {
   background-color: #4E5456;
   text-align: center;
@@ -500,6 +524,13 @@ fieldset {
           background-size: cover;
   background-color: #ccc; }
 
+#portfolio {
+  background-color: #969B98; }
+
+.port-chev {
+  text-align: center;
+  padding-top: 1em; }
+
 .portfolio-section-header h1 {
   text-align: center;
   margin-top: 0px;
@@ -507,9 +538,21 @@ fieldset {
   font-size: 50px;
   color: #fff; }
 
+.col-md-12 {
+  padding-right: 0px;
+  padding-left: 0px; }
+
+#portfolio .col-md-6 {
+  padding-left: 0px;
+  padding-right: 0px; }
+
 .port-container {
-  padding-top: 1em;
-  padding-bottom: 2em; }
+  padding-top: 0px;
+  padding-bottom: 0px; }
+
+.portfolio-content {
+  padding-left: 10px;
+  padding-right: 10px; }
 
 /* entire container, keeps perspective */
 .flip-container {
@@ -525,10 +568,10 @@ fieldset {
 
 /* flip speed goes here */
 .flipper {
-  -webkit-transition: 0.6s;
-  -o-transition: 0.6s;
-  -moz-transition: 0.6s;
-  transition: 0.6s;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  -moz-transition: 1s;
+  transition: 1s;
   -webkit-transform-style: preserve-3d;
      -moz-transform-style: preserve-3d;
           transform-style: preserve-3d;
@@ -560,6 +603,8 @@ fieldset {
 @media (min-width: 320px) {
   .parallax {
     min-height: 135px; }
+  .port-chev {
+    display: none; }
   .portfolio-section-header h1 {
     padding-top: 34px; }
   .flip-container, .front, .back {
@@ -567,14 +612,24 @@ fieldset {
 
 @media (min-width: 768px) {
   .section-1 {
-    padding-top: 5em;
-    padding-bottom: 5em; }
+    padding-top: 4em;
+    padding-bottom: 4em; }
   .parallax {
     min-height: 300px; }
+  .port-chev {
+    display: block; }
   .portfolio-section-header h1 {
     padding-top: 2em; }
+  .portfolio-img {
+    text-align: center; }
+    .portfolio-img img {
+      width: 100%;
+      height: 330px; }
+  .portfolio-content p {
+    font-size: 17px;
+    line-height: 25px; }
   .flip-container, .front, .back {
-    height: 26em; } }
+    height: 23.5em; } }
 
 .about-page-header {
   padding-bottom: 9px;
@@ -582,6 +637,20 @@ fieldset {
   border-bottom: 1px solid #eeeeee; }
   .about-page-header h1 {
     text-align: center; }
+
+@media (min-width: 320px) {
+  .about-page .col-md-6 {
+    padding-left: 5px;
+    padding-right: 5px; }
+  .about-img img {
+    width: 100%; } }
+
+@media (min-width: 768px) {
+  .about-img img {
+    width: unset; }
+  .about-page .col-md-6 {
+    padding-left: 5px;
+    padding-right: 20px; } }
 
 .contact-form {
   margin-top: 6em;
@@ -595,9 +664,6 @@ fieldset {
   margin-left: 0px;
   margin-right: 0px; }
 
-#portfolio {
-  background-color: #969B98; }
-
 .portfolio-page-header h1 {
   text-align: center;
   margin-top: 1em;
@@ -610,12 +676,6 @@ fieldset {
   padding-bottom: 1em; }
 
 @media (min-width: 320px) {
-  .portfolio-img {
-    text-align: center; }
-    .portfolio-img img {
-      width: 100%; } }
-
-@media (min-width: 768px) {
   .portfolio-img {
     text-align: center; }
     .portfolio-img img {
