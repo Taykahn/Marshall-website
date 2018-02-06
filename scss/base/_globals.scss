@@ -4,10 +4,41 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4 {
-	font-family: oswald;
+.col-md-12 {
+	background-color: #fafafa;
 }
 
-p {
+h1, h2, h3, h4 {
+	font-family: oswald;
+	margin-top: 0px;
+}
+
+p, a {
 	font-family: arsenal;
+}
+
+@media ( max-width: 1024px ) {
+	.bkgd-img {
+		min-height: 500.08px;
+		background-position: center;
+		background-repeat: no-repeat;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+}
+
+.container {
+	width: 100%;
+}
+
+.container-fluid {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.col-sm-12 {
+	padding-right: 0px;
+	padding-left: 0px;
 }

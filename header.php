@@ -42,25 +42,13 @@
 
 <div id="top">
 
-	<nav class="navbar navbar-default navbar-fixed-top">
+	<nav class="navbar navbar-default navbar-fixed-top navbar-lg">
 
 		<div class="container">
 
 			<div class="navbar-header">
 
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-
-					<span class="sr-only">Toggle navigation</span>
-
-					<span class="icon-bar"></span>
-
-					<span class="icon-bar"></span>
-
-					<span class="icon-bar"></span>
-
-				</button><!-- end navbar-toggle collapsed -->
-
-			</div><!-- end navbar-header -->
+			</div><!-- .navbar-header -->
 
 			<div id="navbar" class="navbar-collapse collapse">
 
@@ -73,13 +61,19 @@
 					wp_nav_menu( $args );
 				?>
 
-			</div><!--/.navbar-collapse -->
+			</div><!-- .navbar-collapse -->
 
-	</nav><!-- end navbar navbar-inverse navbar-fixed-top -->
+	</nav><!-- .navbar .navbar-inverse .navbar-fixed-top -->
 
-</div><!-- end top -->
+	<div id="navbar-sm">
 
-	<header>
+		<?php include( 'partials/navbar-sm.php' ); ?> 
+
+	</div><!-- #navbar-sm -->
+
+</div><!-- #top -->
+
+<header>
 
 	<div class="header">
 
@@ -87,25 +81,27 @@
 
 			<?php if ( is_front_page() ) { ?>
 
-			<div class="header-parallax" style="background-image: url( '<?php the_field( 'header_img', 'option' ); ?>' )">
+				<div class="header-parallax bkgd-img" style="background-image: url( '<?php the_field( 'header_img', 'option' ); ?>' )">
 
-			<div class="site-name">
+					<div class="site-name">
 
-				<h1><?php the_field( 'name', 'option' ); ?></h1>
+						<h1><?php the_field( 'name', 'option' ); ?></h1>
 
-				<p><?php the_field( 'description', 'option' ); ?></p>
+						<p><?php the_field( 'description', 'option' ); ?></p>
 
-				<a href="#homepage"><img src="<?php the_field( 'chevron_img', 'option' ) ?>"></a>
+						<a href="#frontpage"><img src="<?php the_field( 'chevron_img', 'option' ) ?>"></a>
+
+					</div><!-- .site-name -->
+
+				</div><!-- .header-parallax .bkgd-img -->
 
 			<?php } else { ?>
 
 			<?php } ?>
 
-			</div><!-- end site-name -->
+		</div><!-- .row -->
 
-		</div><!-- end row -->
-
-	</div><!-- end header -->
+	</div><!-- .header -->
 
 </header>
 

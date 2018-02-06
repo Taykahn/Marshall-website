@@ -11,8 +11,6 @@
 
 			<div class="col-md-9">
 
-			SIMGLE.PHP
-
 				<?php if ( have_posts() ) : ?>
 
 					<?php while ( have_posts() ) : the_post(); ?>
@@ -21,7 +19,7 @@
 
 							<h1><?php the_title(); ?></h1>
 
-						</div><!-- end page-header -->
+						</div><!-- .page-header -->
 
 						<a href="<?php the_permalink(); ?>"><?php the_content(); ?></a>
 
@@ -33,16 +31,16 @@
 
 						<h1>Oh no!</h1>
 
-					</div><!-- end page-header -->
+					</div><!-- .page-header -->
 
 					<p>No content is appearing for this page!</p>
 
 				<?php endif; ?>
 
-			</div><!-- end col-md-9 -->
+			</div><!-- .col-md-9 -->
 
-		</div><!-- end row -->
+		</div><!-- .row -->
 
-	</div><!-- end container -->
+	</div><!-- .container -->
 
 <?php get_footer(); ?>

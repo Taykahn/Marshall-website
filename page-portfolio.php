@@ -23,7 +23,7 @@ $post_id = $post->ID;
 
 					<h1><?php the_title(); ?></h1>
 
-				</div><!-- end page-header --><hr>
+				</div><!-- .page-header --><hr>
 
 				<?php if( have_rows( 'portfolio', $post_id ) ): ?>
 
@@ -35,9 +35,9 @@ $post_id = $post->ID;
 
 								<h2><?php the_sub_field( 'title', $post_id ); ?></h2>
 
-							</div><!-- end portfolio-title -->
+							</div><!-- .portfolio-title -->
 
-						</div><!-- end col-md-12 -->
+						</div><!-- .col-md-12 -->
 
 						<div class="col-md-6 web-content">
 
@@ -45,9 +45,9 @@ $post_id = $post->ID;
 
 								<img src="<?php the_sub_field( 'image', $post_id ); ?>" />
 
-							</div><!-- end portfolio-img -->
+							</div><!-- .portfolio-img -->
 
-						</div><!-- end col-md-6 -->
+						</div><!-- .col-md-6 -->
 
 						<div class="col-md-6 web-content">
 
@@ -55,20 +55,20 @@ $post_id = $post->ID;
 
 								<?php the_sub_field( 'content', $post_id ); ?>
 
-							</div><!-- end portfolio-content -->
+							</div><!-- .portfolio-content -->
 
-						</div><!-- end col-md-6 -->
+						</div><!-- .col-md-6 -->
 
 					<?php endwhile; ?>
 
 				<?php endif; ?>
 
-			</div><!-- end col-md-12 -->
+			</div><!-- .col-md-12 -->
 
-		</div><!-- end row -->
+		</div><!-- .row -->
 
-	</div><!-- end container -->
+	</div><!-- .container -->
 
-</div><!-- end nav-change -->
+</div><!-- #nav-change -->
 
 <?php get_footer(); ?>

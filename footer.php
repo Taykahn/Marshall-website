@@ -22,11 +22,11 @@
 
 				<p>&copy; <?php bloginfo('name'); ?> <?php echo date('Y'); ?></p>
 
-			</div><!-- end copyright -->
+			</div><!-- .copyright -->
 
-		</section><!-- end two-column -->
+		</section><!-- .two-column -->
 
-	</footer><!-- end footer -->
+	</footer><!-- .footer -->
 
 	<?php wp_footer(); ?>
 

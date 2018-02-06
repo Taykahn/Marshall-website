@@ -1,9 +1,20 @@
 .about-page-header {
 	padding-bottom: 9px;
-	margin: 40px 0 20px;
 	border-bottom: 1px solid #eeeeee;
 	h1 {
 		text-align: center;
+		padding-top: 2em;
+		margin-top: 0px;
+		letter-spacing: 8px;
+	}
+}
+
+.about-content {
+	padding-top: 1em;
+	p {
+		font-size: 17px;
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 }
 
@@ -14,14 +25,23 @@
 			padding-right: 5px;
 		}
 	}
-	.about-img {
-		img {
-			width: 100%;
-		}
+}
+
+.about-img {
+	img {
+		padding-top: 25px;
+		display: block;
+		margin: auto;
 	}
 }
 
 @media ( min-width: 768px ) {
+	.about-content {
+		p {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+	}
 	.about-img {
 		img {
 			width: unset;

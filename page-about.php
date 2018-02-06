@@ -11,7 +11,7 @@ get_header(); ?>
 
 		<div class="row">
 
-			<div class="col-md-12">
+			<div class="col-sm-12">
 
 				<?php if ( have_posts() ) : ?>
 
@@ -21,38 +21,38 @@ get_header(); ?>
 
 							<h1><?php the_title(); ?></h1>
 
-						</div><!-- end page-header -->
+						</div><!-- .page-header -->
 
-						<div class="col-md-6">
+						<div class="col-sm-6">
 
 							<div class="about-img">
 
 								<?php the_post_thumbnail(); ?>
 
-							</div><!-- end contact-img -->
+							</div><!-- .contact-img -->
 
-						</div><!-- end col-md-6 -->
+						</div><!-- .col-sm-6 -->
 
-						<div class="col-md-6">
+						<div class="col-sm-6">
 
 							<div class="about-content">
 
 								<?php the_content(); ?>
 
-							</div><!-- end contact-content -->
+							</div><!-- .contact-content -->
 
-						</div><!-- end col-md-6 -->
+						</div><!-- .col-sm-6 -->
 
 					<?php endwhile; ?>
 
 				<?php endif; ?>
 
-			</div><!-- end col-md-9 -->
+			</div><!-- .col-sm-12 -->
 
-		</div><!-- end row -->
+		</div><!-- .row -->
 
-	</div><!-- end container -->
+	</div><!-- .container -->
 
-</div><!-- end nav-change -->
+</div><!-- #nav-change -->
 
 <?php get_footer(); ?>

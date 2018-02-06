@@ -13,75 +13,71 @@ $post_id = $post->ID;
 
 <div id="nav-change">
 
-<section id="homepage">
+<section id="frontpage" class="container-fluid no-pad">
 
-	<div class="container-fluid no-pad">
+	<div class="row section-1">
 
-		<div class="row section-1">
+		<div class="col-sm-4">
 
-			<div class="col-md-4">
+			<div class="front-page-column-one">
 
-				<div class="front-page-column-one">
+				<?php if( get_field('col-1-img') ): ?>
 
-					<?php if( get_field('col-1-img') ): ?>
+					<img src="<?php the_field( 'col-1-img' ); ?>" />
 
-						<img src="<?php the_field( 'col-1-img' ); ?>" />
+				<?php endif; ?>
 
-					<?php endif; ?>
+				<h2><?php the_field( 'col-1-title', $post_id ); ?></h2>
 
-					<h2><?php the_field( 'col-1-title', $post_id ); ?></h2>
+				<p><?php the_field( 'col-1-content', $post_id ); ?></p>
 
-					<p><?php the_field( 'col-1-content', $post_id ); ?></p>
+			</div><!-- .front-page-column-one -->
 
-				</div><!-- end front-page-column-one -->
+		</div><!-- .col-sm-4 -->
 
-			</div><!-- end col-md-4 -->
+		<div class="col-sm-4">
 
-			<div class="col-md-4">
+			<div class="front-page-column-two">
 
-				<div class="front-page-column-two">
+				<?php if( get_field('col-2-img') ): ?>
 
-					<?php if( get_field('col-2-img') ): ?>
+					<img src="<?php the_field( 'col-2-img' ); ?>" />
 
-						<img src="<?php the_field( 'col-2-img' ); ?>" />
+				<?php endif; ?>
 
-					<?php endif; ?>
+				<h2><?php the_field( 'col-2-title', $post_id ); ?></h2>
 
-					<h2><?php the_field( 'col-2-title', $post_id ); ?></h2>
+				<p><?php the_field( 'col-2-content', $post_id ); ?></p>
 
-					<p><?php the_field( 'col-2-content', $post_id ); ?></p>
+			</div><!-- .front-page-column-two -->
 
-				</div><!-- end front-page-column-two -->
+		</div><!-- .col-sm-4 -->
 
-			</div><!-- end col-md-4 -->
+		<div class="col-sm-4">
 
-			<div class="col-md-4">
+			<div class="front-page-column-three">
 
-				<div class="front-page-column-three">
+					<?php if( get_field('col-3-img') ): ?>
 
-						<?php if( get_field('col-3-img') ): ?>
+					<img src="<?php the_field( 'col-3-img' ); ?>" />
 
-						<img src="<?php the_field( 'col-3-img' ); ?>" />
+				<?php endif; ?>
 
-					<?php endif; ?>
+				<h2><?php the_field( 'col-3-title', $post_id ); ?></h2>
 
-					<h2><?php the_field( 'col-3-title', $post_id ); ?></h2>
+				<p><?php the_field( 'col-3-content', $post_id ); ?></p>
 
-					<p><?php the_field( 'col-3-content', $post_id ); ?></p>
+			</div><!-- .front-page-column-three -->
 
-				</div><!-- end front-page-column-three -->
+		</div><!-- .col-sm-4 -->
 
-			</div><!-- end col-md-4 -->
+	</div><!-- .row .section-1 -->
 
-		</div><!--end row-->
-
-	</div><!--.container-->
-
-</section><!-- end homepage -->
+</section><!-- #frontpage .container-fluid .no-pad -->
 
 <section class="section-two container-fluid">
 
-	<div class="parallax" style="background-image: url('<?php the_field( 'portfolio_img_br', $post_id ) ?>')">
+	<div class="parallax bkgd-img" style="background-image: url('<?php the_field( 'portfolio_img_br', $post_id ) ?>')">
 
 		<div class="portfolio-section-header">
 
@@ -91,76 +87,68 @@ $post_id = $post->ID;
 
 				<a href="#portfolio"><img src="<?php the_field( 'port_chev', 'option' ) ?>"></a>
 
-			</div>
+			</div><!-- .port-chev -->
 
-		</div><!-- end page-header -->
+		</div><!-- .portfolio-section-header -->
 
-	</div><!-- end parallax -->
+	</div><!-- .parallax .bkgd-img -->
 
-</section><!-- end img-br -->
+</section><!-- .section-two .container-fluid -->
 
 <section id="portfolio">
 
-	<div class="container port-container">
+	<div class="container max no-pad port-container">
 
-		<div class="row">
+		<?php if( have_rows( 'portfolio', $post_id ) ): ?>
 
-			<div class="col-md-12 stupid-crap">
+			<?php while ( have_rows( 'portfolio', $post_id ) ) : the_row(); ?>
 
-				<?php if( have_rows( 'portfolio', $post_id ) ): ?>
+				<div class="col-md-6">
 
-					<?php while ( have_rows( 'portfolio', $post_id ) ) : the_row(); ?>
+					<div class="flip-container">
 
-						<div class="col-md-6">
+						<div class="flipper">
 
-						<div class="flip-container">
+							<div class="front">
 
-							<div class="flipper">
+								<div class="portfolio-img fp-port-img">
 
-								<div class="front">
+									<img src="<?php the_sub_field( 'image', $post_id ); ?>" />
 
-									<div class="portfolio-img">
+								</div><!-- .portfolio-img -->
 
-										<img src="<?php the_sub_field( 'image', $post_id ); ?>" />
+							</div><!-- .front -->
 
-									</div><!-- end portfolio-img -->
+							<div class="back">
 
-								</div><!-- end front -->
+								<div class="portfolio-title">
 
-								<div class="back">
+									<h2><?php the_sub_field( 'title', $post_id ); ?></h2>
 
-									<div class="portfolio-title">
+								</div><!-- .portfolio-title -->
 
-										<h2><?php the_sub_field( 'title', $post_id ); ?></h2>
+								<div class="portfolio-content">
 
-									</div><!-- end portfolio-title -->
+									<?php the_sub_field( 'content', $post_id ); ?>
 
-									<div class="portfolio-content">
+								</div><!-- .portfolio-content -->
 
-										<?php the_sub_field( 'content', $post_id ); ?>
+							</div><!-- .back -->
 
-									</div><!-- end portfolio-content -->
+						</div><!-- .flipper -->
 
-								</div><!-- end back -->
+					</div><!-- .flip-container -->
 
-							</div><!-- end flipper -->
+				</div><!-- .col-md-6 -->
 
-						</div><!-- end flip-container -->
+			<?php endwhile; ?>
 
-						</div>
+		<?php endif; ?>
 
-					<?php endwhile; ?>
+	</div><!-- .container -->
 
-				<?php endif; ?>
+</section><!-- #portfolio -->
 
-			</div><!-- end col-md-12 -->
-
-		</div><!-- end row -->
-
-	</div><!-- end container -->
-
-</section><!-- end portfolio -->
-
-</div><!-- end nav-change -->
+</div><!-- #nav-change -->
 
 <?php get_footer() ?>

@@ -1,37 +1,35 @@
-			<div class="clear">
+<div class="clear">
 
-				<?php
+	<?php $images = get_field('gallery'); ?>
 
-					$images = get_field('gallery');
+		<?php if( $images ): ?>
 
-						if( $images ): ?>
+			<div class="slider-for">
 
-							<div class="slider-for">
+				<?php foreach( $images as $image ): ?>
 
-								<?php foreach( $images as $image ): ?>
+					<div class="slick-container">
 
-									<div class="slick-container">
+					</div><!-- .slick-container -->
 
-									</div>
+				<?php endforeach; ?>
 
-								<?php endforeach; ?>
+			</div><!-- .slider-for -->
 
-							</div>
+			<div class="slider-nav">
 
-							<div class="slider-nav">
+					<?php foreach( $images as $image ): ?>
 
-									<?php foreach( $images as $image ): ?>
+						<div>
 
-										<div>
+							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
-											<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+						</div>
 
-										</div>
+					<?php endforeach; ?>
 
-									<?php endforeach; ?>
+			</div>
 
-							</div>
+		<?php endif; ?>
 
-						<?php endif; ?>
-
-			</div><!-- end clear -->
+</div><!-- .clear -->

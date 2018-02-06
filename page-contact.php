@@ -23,12 +23,12 @@ $post_id = $post->ID;
 
 				<?php include( 'form/form.php' ); ?>
 
-			</div><!-- end contact-content -->
+			</div><!-- .contact-content -->
 
-		</div><!-- end row -->
+		</div><!-- .row -->
 
-	</div><!-- end container -->
+	</div><!-- .container -->
 
-</div><!-- end nav-change -->
+</div><!-- #nav-change -->
 
 <?php get_footer(); ?>
