@@ -231,8 +231,7 @@ a#scroll-to-top {
   background: none; }
 
 .contact-form {
-  max-width: 400px;
-  width: 100%;
+  max-width: 450px;
   padding-top: 0px;
   padding-bottom: 50px;
   padding-left: 10px;
@@ -241,95 +240,14 @@ a#scroll-to-top {
   position: relative; }
   .contact-form .error {
     color: red; }
-  .contact-form .success {
-    color: #ff9966;
-    text-align: center;
-    font-weight: bold;
-    font-size: 14px; }
 
-#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] {
-  font: 400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
-
-#contact {
-  background: rgba(249, 249, 249, 0.72);
-  padding: 25px; }
-
-#contact h3 {
-  color: #F96;
-  display: block;
-  font-size: 30px;
-  font-weight: 400; }
-
-#contact h4 {
-  margin: 5px 0 15px;
-  display: block;
-  font-size: 13px; }
-
-fieldset {
-  border: medium none !important;
-  margin: 0 0 10px;
-  min-width: 100%;
-  padding: 0;
-  width: 100%; }
-
-#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
-  width: 100%;
-  border: 1px solid #CCC;
-  background: #FFF;
-  margin: 0 0 5px;
-  padding: 10px; }
-
-#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
-  -webkit-transition: border-color 0.3s ease-in-out;
-  -moz-transition: border-color 0.3s ease-in-out;
-  -o-transition: border-color 0.3s ease-in-out;
-  transition: border-color 0.3s ease-in-out;
-  border: 1px solid #AAA; }
-
-#contact textarea {
-  height: 100px;
-  max-width: 100%;
-  resize: none; }
-
-#contact button[type="submit"] {
-  cursor: pointer;
-  width: 100%;
-  border: none;
-  background: #0CF;
-  color: #FFF;
-  margin: 0 0 5px;
-  padding: 10px;
-  font-size: 15px; }
-
-#contact button[type="submit"]:hover {
-  background: #09C;
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  -webkit-transition: background-color 0.3s ease-in-out;
-  -o-transition: background-color 0.3s ease-in-out;
-  -moz-transition: background-color 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out; }
-
-#contact button[type="submit"]:active {
-  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
-     -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
-          box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5); }
-
-#contact input:focus, #contact textarea:focus {
-  outline: 0;
-  border: 1px solid #999; }
-
-::-webkit-input-placeholder {
-  color: #888; }
-
-:-moz-placeholder {
-  color: #888; }
-
-::-moz-placeholder {
-  color: #888; }
-
-:-ms-input-placeholder {
-  color: #888; }
+div.wpcf7 {
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  background-color: #e9e7e8e0;
+  margin: 0;
+  padding: 15px; }
 
 @media (max-width: 1024px) {
   .navbar-lg {
@@ -790,6 +708,14 @@ fieldset {
 .port-container {
   padding-top: 0px;
   padding-bottom: 0px; }
+
+.fp-portfolio-content {
+  padding: 10px; }
+
+@media (min-width: 1025px) {
+  .portfolio-content p {
+    padding-left: 15px;
+    padding-right: 15px; } }
 
 /* portfolio section flip */
 /* entire container, keeps perspective */

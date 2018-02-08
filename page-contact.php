@@ -19,11 +19,19 @@ $post_id = $post->ID;
 
 		<div class="row">
 
-			<div class="contact-form">
+			<?php if ( have_posts() ) : ?>
 
-				<?php include( 'form/form.php' ); ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 
-			</div><!-- .contact-content -->
+					<div class="contact-form">
+
+						<p><?php the_content(); ?></p>
+
+					</div><!-- .contact-form -->
+
+				<?php endwhile; ?>
+
+			<?php endif; ?>
 
 		</div><!-- .row -->
 

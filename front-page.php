@@ -127,7 +127,7 @@ $post_id = $post->ID;
 
 								</div><!-- .portfolio-title -->
 
-								<div class="portfolio-content">
+								<div class="fp-portfolio-content">
 
 									<?php the_sub_field( 'content', $post_id ); ?>
 

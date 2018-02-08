@@ -1,5 +1,5 @@
 .footer {
-	background-color: #4E5456;
+	background-color: $footer-grey;
 	img {
 		padding-top: 1em;
 		display: block;
@@ -9,11 +9,11 @@
 
 .copyright {
 	p {
-	background-color: #4E5456;
+	background-color: $charcoal;
 	text-align: center;
 	padding-top: 3em;
 	padding-bottom: 3em;
-	color: #000;
+	color: $black;
 	font-size: 10px;
 	margin: 0px;
 	font-weight: bold;
