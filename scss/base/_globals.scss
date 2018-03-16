@@ -17,6 +17,10 @@ p, a {
 	font-family: arsenal;
 }
 
+ul {
+	list-style-type: none;
+}
+
 @media ( max-width: 1024px ) {
 	.bkgd-img {
 		min-height: 500.08px;
@@ -42,3 +46,35 @@ p, a {
 	padding-right: 0px;
 	padding-left: 0px;
 }
+
+#nav-change {
+	min-height: 68em;
+}
+
+.border-bottom {
+	padding: 0px;
+}
+
+.blog-navigation {
+	ul {
+		display: -webkit-inline-box;
+		padding: 0px;
+	}
+
+	li {
+		a {
+			letter-spacing: 10px;
+		}
+	}
+	span {
+	padding-right: 5px;
+	}
+}
+
+
+
+
+
+
+
+

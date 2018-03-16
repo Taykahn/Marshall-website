@@ -5,11 +5,11 @@
 
  get_header(); ?>
 
-	<div class="container">
+	<div class="container single-pg">
 
 		<div class="row">
 
-			<div class="col-md-9">
+			<div class="col-md-12">
 
 				<?php if ( have_posts() ) : ?>
 
@@ -21,9 +21,13 @@
 
 						</div><!-- .page-header -->
 
-						<a href="<?php the_permalink(); ?>"><?php the_content(); ?></a>
+						<div class="sgl-pg-content">
 
-						<?php the_post_thumbnail(); ?>
+							<p><?php the_content(); ?></p>
+
+							<?php the_post_thumbnail(); ?>
+
+						</div><!-- .sgl-pg-content -->
 
 					<?php endwhile; else: ?>
 

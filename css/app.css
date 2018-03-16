@@ -206,6 +206,9 @@ h1, h2, h3, h4 {
 p, a {
   font-family: arsenal; }
 
+ul {
+  list-style-type: none; }
+
 @media (max-width: 1024px) {
   .bkgd-img {
     min-height: 500.08px;
@@ -226,6 +229,22 @@ p, a {
 .col-sm-12 {
   padding-right: 0px;
   padding-left: 0px; }
+
+#nav-change {
+  min-height: 68em; }
+
+.border-bottom {
+  padding: 0px; }
+
+.blog-navigation ul {
+  display: -webkit-inline-box;
+  padding: 0px; }
+
+.blog-navigation li a {
+  letter-spacing: 10px; }
+
+.blog-navigation span {
+  padding-right: 5px; }
 
 a#scroll-to-top {
   background: none; }
@@ -645,6 +664,9 @@ div.wpcf7 {
   margin: 0px;
   font-weight: bold; }
 
+.sidebar {
+  margin-top: 93px; }
+
 .front-page-column-one,
 .front-page-column-two,
 .front-page-column-three {
@@ -812,6 +834,20 @@ div.wpcf7 {
   .back {
     height: 23.5em; } }
 
+#blog {
+  background-color: #fafafa; }
+
+.blog-page {
+  padding: 20px; }
+
+.blog-pg-title {
+  margin-top: 5em;
+  text-align: center; }
+
+.blog-img img {
+  max-width: 300px;
+  max-height: 300px; }
+
 .about-page-header {
   padding-bottom: 9px;
   border-bottom: 1px solid #eeeeee; }
@@ -877,5 +913,18 @@ div.wpcf7 {
 
 .portfolio-img img {
   width: 100%; }
+
+.single-pg {
+  margin-top: 3em; }
+
+.page-header h1 {
+  text-align: center; }
+
+.sgl-pg-content {
+  padding: 20px; }
+  .sgl-pg-content p {
+    font-size: 20px; }
+  .sgl-pg-content img {
+    max-width: 100%; }
 
 /*# sourceMappingURL=app.css.map */

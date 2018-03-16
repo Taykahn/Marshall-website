@@ -1,0 +1,19 @@
+#blog {
+	background-color: $off-white;
+}
+
+.blog-page {
+	padding: 20px;
+}
+
+.blog-pg-title {
+	margin-top: 5em;
+	text-align: center;
+}
+
+.blog-img {
+	img {
+		max-width: 300px;
+		max-height: 300px;
+	}
+}

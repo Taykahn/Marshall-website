@@ -6,6 +6,7 @@
 //Require included files
 require_once STYLESHEETPATH . '/includes/mbc-theme-class.php';
 require_once STYLESHEETPATH . '/includes/post-types.php';
+require_once STYLESHEETPATH . '/includes/mbc-hooks.php';
 
 
 /**
@@ -95,24 +96,31 @@ if( function_exists('acf_add_options_page') ) {
  * add widgets
  */
 
-function create_widget( $name, $id, $description ) {
+function wpb_widgets_init() {
+ 
+	register_sidebar( array(
+		'name'          => __( 'Main Sidebar', 'wpb' ),
+		'id'            => 'sidebar-1',
+		'description'   => __( 'The main sidebar appears on the right on each page except the front page template', 'wpb' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+ 
+	register_sidebar( array(
+		'name'          =>__( 'Front page sidebar', 'wpb'),
+		'id'            => 'sidebar-2',
+		'description'   => __( 'Appears on the static front page template', 'wpb' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
 
-	register_sidebar(array(
-		'name' => __( $name ),	 
-		'id' => $id, 
-		'description'   => __( $description ),
-		'before_widget' => '<div class="widget">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h3>',
-		'after_title'   => '</h3>'
-	));
-
-}
-
-create_widget( 'Front Page Left', 'front-left', 'Displays on the left of the homepage' );
-create_widget( 'Front Page Center', 'front-center', 'Displays in the center of the homepage' );
-create_widget( 'Front Page Right', 'front-right', 'Displays on the right of the homepage' );
-create_widget( 'Contact Page Right', 'contact-right', 'Displays on the side of contact page with a sidebar.' );
+	}
+ 
+add_action( 'widgets_init', 'wpb_widgets_init' );
 
 
 add_theme_support( 'post-thumbnails' );
