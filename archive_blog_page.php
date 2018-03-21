@@ -46,11 +46,15 @@ $blog = new WP_Query( $query );
 
 					<?php while ( $blog->have_posts() ) : $blog->the_post() ?>
 
-						<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+						<div class="blog-pg-title-content">
 
-						<h5>Author: <?php the_author(); ?> | Posted on: <?php the_date(); ?></h5>
+							<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 
-						<h5>Categories: <?php the_category(); ?></h5>
+							<h5>Author: <?php the_author(); ?> | Posted on: <?php the_date(); ?></h5>
+
+							<h5>Categories: <?php the_category(); ?></h5>
+
+						</div><!-- .blog-pg-title-content -->
 
 						<div class="blog-img">
 

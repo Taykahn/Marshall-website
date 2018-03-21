@@ -11,9 +11,36 @@
 	text-align: center;
 }
 
+.blog-pg-title-content {
+	h2 {
+		padding-top: 30px;
+	}
+}
+
 .blog-img {
 	img {
 		max-width: 300px;
 		max-height: 300px;
+
+		@media (max-width: 600px) {
+			max-width: 100%;
+			max-height: 210px;
+		}
+	}
+}
+
+.ig-blog {
+	img {
+		max-width: 100%;
+	}
+}
+
+.image-section {
+	padding-bottom: 20px;
+}
+
+.image-gallery {
+	ul {
+		padding: 0px;
 	}
 }

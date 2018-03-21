@@ -844,9 +844,25 @@ div.wpcf7 {
   margin-top: 5em;
   text-align: center; }
 
+.blog-pg-title-content h2 {
+  padding-top: 30px; }
+
 .blog-img img {
   max-width: 300px;
   max-height: 300px; }
+  @media (max-width: 600px) {
+    .blog-img img {
+      max-width: 100%;
+      max-height: 210px; } }
+
+.ig-blog img {
+  max-width: 100%; }
+
+.image-section {
+  padding-bottom: 20px; }
+
+.image-gallery ul {
+  padding: 0px; }
 
 .about-page-header {
   padding-bottom: 9px;
@@ -926,5 +942,9 @@ div.wpcf7 {
     font-size: 20px; }
   .sgl-pg-content img {
     max-width: 100%; }
+    @media (max-width: 600px) {
+      .sgl-pg-content img {
+        max-width: 100%;
+        max-height: 250px; } }
 
 /*# sourceMappingURL=app.css.map */

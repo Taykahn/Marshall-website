@@ -29,6 +29,16 @@
 
 						</div><!-- .sgl-pg-content -->
 
+						<div class="image-section col-sm-12">
+
+							<div class="image-gallery">
+
+								<?php include( 'partials/ig-blog.php' ); ?>
+
+							</div><!-- .image-gallery -->
+
+						</div><!-- .image-section .col-md-12 -->
+
 					<?php endwhile; else: ?>
 
 					<div class="page-header">
