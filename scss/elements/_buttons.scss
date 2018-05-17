@@ -1,3 +1,16 @@
 a#scroll-to-top {
 	background: none;
 }
+
+#button {
+	h1:hover {
+		text-transform: uppercase;
+	}
+	.btn {
+		background-color: transparent;
+		border-color: $white;
+		font-size: 18px;
+		line-height: 1.33333;
+		border-radius: 5px;
+	}
+}

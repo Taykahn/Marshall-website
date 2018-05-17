@@ -36,16 +36,14 @@
 	}
 }
 
-#portfolio {
-	background-color: $off-white;
-}
-
-.port-chev {
-	text-align: center;
-	padding-top: 1em;
-}
-
 .portfolio-section-header {
+	padding-top: 13em;
+
+	@media ( max-width: 1024px ) {
+		padding-top: 11em;
+	}
+
+	text-align: center;
 	h1 {
 		text-align: center;
 		margin-top: 0px;
@@ -55,109 +53,6 @@
 	}
 }
 
-#portfolio { 
-	.col-md-6 {
-		padding-left: 0px;
-		padding-right: 0px;
-	}
-}
-
-.port-container {
-	padding-top: 0px;
-	padding-bottom: 0px;
-}
-
-.fp-portfolio-content {
-	padding: 10px;
-}
-
-@media ( min-width: 1025px ) {
-	.portfolio-content {
-		p {
-			padding-left: 15px;
-			padding-right: 15px;
-		}
-	}
-}
-
-/* portfolio section flip */
-/* entire container, keeps perspective */
-.flip-container {
-	perspective: 1000px;
-}
-
-/* flip the pane when hovered */
-.flip-container:hover .flipper, 
-.flip-container.hover .flipper {
-	transform: rotateY(180deg);
-}
-
-/* flip speed goes here */
-.flipper {
-	transition: .8s;
-	transform-style: preserve-3d;
-	position: relative;
-}
-
-/* hide back of pane during swap */
-.front, .back {
-	backface-visibility: hidden;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
-/* front pane, placed above back */
-.front {
-	z-index: 2;
-	/* for firefox 31 */
-	transform: rotateY(0deg);
-}
-
-/* back, initially hidden pane */
-.back {
-	transform: rotateY(180deg);
-}
-
-@media ( min-width: 320px ) {
-	.parallax {
-		min-height: 300px;
-	}
-	.port-chev {
-		display: none;
-	}
-	.portfolio-section-header {
-		h1 {
-			padding-top: 2em;
-		}
-	}
-}
-
-@media (  max-width: 414px ){
-	.fp-port-img {
-		img {
-			height: 273px;
-		}
-	}
-	.flip-container,
-	.front,
-	.back {
-		height: 19.4em;
-	}
-}
-
-@media ( min-width: 415px ) {
-	.fp-port-img {
-		img {
-			height: 351px;
-		}
-	}
-	.flip-container,
-	.front,
-	.back {
-		height: 25em;
-	}
-}
 
 @media ( min-width: 1025px ) {
 	.section-1 {
@@ -167,12 +62,8 @@
 	.parallax {
 		min-height: 400px;
 	}
-	.port-chev {
-		display: block;
-	}
 	.portfolio-section-header{
 		h1 {
-			padding-top: 2em;
 			letter-spacing: 10px;
 		}
 	}
@@ -182,16 +73,5 @@
 			height: 330px;
 			padding: 0px;
 		}
-	}
-	.portfolio-content {
-		p {
-			font-size: 17px;
-			line-height: 25px;
-		}
-	}
-	.flip-container,
-	.front,
-	.back {
-		height: 23.5em;
 	}
 }

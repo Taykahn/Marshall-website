@@ -79,75 +79,15 @@ $post_id = $post->ID;
 
 	<div class="parallax bkgd-img" style="background-image: url('<?php the_field( 'portfolio_img_br', $post_id ) ?>')">
 
-		<div class="portfolio-section-header">
+		<div class="portfolio-section-header" id="button">
 
-			<h1>Portfolio</h1>
-
-			<div class="port-chev">
-
-				<a href="#portfolio"><img src="<?php the_field( 'port_chev', 'option' ) ?>"></a>
-
-			</div><!-- .port-chev -->
+			<a href="http://localhost:3000/portfolio/"><button type="button" class="btn"><h1>Portfolio</h1></button></a>
 
 		</div><!-- .portfolio-section-header -->
 
 	</div><!-- .parallax .bkgd-img -->
 
 </section><!-- .section-two .container-fluid -->
-
-<section id="portfolio">
-
-	<div class="container max no-pad port-container">
-
-		<?php if( have_rows( 'portfolio', $post_id ) ): ?>
-
-			<?php while ( have_rows( 'portfolio', $post_id ) ) : the_row(); ?>
-
-				<div class="col-md-6">
-
-					<div class="flip-container">
-
-						<div class="flipper">
-
-							<div class="front">
-
-								<div class="portfolio-img fp-port-img">
-
-									<img src="<?php the_sub_field( 'image', $post_id ); ?>" />
-
-								</div><!-- .portfolio-img -->
-
-							</div><!-- .front -->
-
-							<div class="back">
-
-								<div class="portfolio-title">
-
-									<h2><?php the_sub_field( 'title', $post_id ); ?></h2>
-
-								</div><!-- .portfolio-title -->
-
-								<div class="fp-portfolio-content">
-
-									<?php the_sub_field( 'content', $post_id ); ?>
-
-								</div><!-- .portfolio-content -->
-
-							</div><!-- .back -->
-
-						</div><!-- .flipper -->
-
-					</div><!-- .flip-container -->
-
-				</div><!-- .col-md-6 -->
-
-			<?php endwhile; ?>
-
-		<?php endif; ?>
-
-	</div><!-- .container -->
-
-</section><!-- #portfolio -->
 
 </div><!-- #nav-change -->
 
