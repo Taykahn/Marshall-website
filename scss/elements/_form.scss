@@ -1,19 +1,53 @@
 .contact-form {
-	max-width: 450px;
+	margin-top: 0em!important;
 	padding-top: 0px;
-	padding-bottom: 50px;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-left: 0px;
+	padding-right: 0px;
 	margin: 0 auto;
 	position: relative;
 	.error {
 		color: red;
 	}
+	h2 {
+		text-align: left;
+		color: $white;
+		padding-top: 20px;
+		padding-left: 98px;
+		font-weight: bold;
+		letter-spacing: 3px;
+		@media ( max-width: 414px ){
+			text-align: center;
+			padding-left: 0px;
+		}
+	}
+	p:last-child {
+		margin: 0px!important;
+	}
 }
 
-div.wpcf7 {
-	border-radius: 5px;
-	background-color: $contact-form-grey;
-	margin: 0;
-	padding: 15px;
+.wpcf7-form-control-wrap {
+	textarea, input {
+		background-color: $trans-black;
+		width: 24em;
+		@media ( max-width: 768px ) {
+			width: 19em;
+		}
+	}
+}
+
+.wpcf7-form {
+	label {
+		text-align: left;
+		color: $white;
+	}
+}
+
+.wpcf7-form-control {
+	margin-bottom: 1em;
+}
+
+.wpcf7-form {
+	p {
+		margin-bottom: 0px;
+	}
 }

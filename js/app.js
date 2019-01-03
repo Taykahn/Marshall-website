@@ -12,10 +12,12 @@ $(document).ready(function(){
 			$(document).scroll(function() {
 			scroll_start = $(this).scrollTop();
 		if ( scroll_start > offset.top ) {
-			$(".navbar-default").css('background-color', 'rgba(236, 231, 231, 0.9)');
+			$(".navbar-default .navbar-nav > li > a").css('transition', '1s');
+			$(".navbar-default .navbar-nav > li > a").css('color', '#ccc');
+			$(".navbar-default .navbar-nav > li > a").css('font-weight', 'bold');
 		} else {
-			$('.navbar-default').css('background-color', 'transparent');
-			$(".navbar-default").css('border-color', 'transparent');
+			$(".navbar-default .navbar-nav > li > a").css('color', '#000');
+			$(".navbar-default .navbar-nav > li > a").css('font-weight', 'unset');
 			}
 		});
 	}
@@ -49,3 +51,4 @@ $(document).ready(function () {
 		$('#wrapper').toggleClass('toggled');
 	});
 });
+

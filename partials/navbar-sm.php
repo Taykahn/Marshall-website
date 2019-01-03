@@ -23,6 +23,12 @@
 
 			</ul><!-- .nav .sidebar-nav -->
 
+			<div class="navbar-sm-soc-icons">
+
+				<?php the_field( 'social_icons', 'options' ); ?>
+
+			</div><!-- .navbar-sm-soc-icons -->
+
 		</nav><!-- .navbar .navbar-inverse .navbar-fixed-top #sidebar-wrapper -->
 
 		<div id="page-content-wrapper">

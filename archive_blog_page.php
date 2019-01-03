@@ -64,7 +64,7 @@ $blog = new WP_Query( $query );
 
 						<div class="blog-content">
 
-							<p><?php the_content(); ?></p>
+							<p><?php the_excerpt(); ?></p>
 
 						</div><!-- .blog-content -->
 

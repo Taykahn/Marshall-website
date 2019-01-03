@@ -1,7 +1,12 @@
 <?php
 /**
  * Class : MBC Theme
+ *
+ * Build custom post types, build cpt custom categories, grab images, loop through queries to build lists,
+ * check to see if page has child pages.
+ *
  */
+
 class MBC_Theme {
 
 	/**
@@ -31,8 +36,9 @@ class MBC_Theme {
 		$this->post_type = $post_type;
 		$this->cpts      = array();
 		$this->cats      = array();
+		$cpt_name        = ( isset( $this->cpts[$this->post_type] ) ? $this->cpts[$this->post_type] : null );
 
-		if ( ! post_type_exists( $this->cpts[$this->post_type] ) ) {
+		if ( ! post_type_exists( $cpt_name ) ) {
 
 			//Register CPTs
 			add_action( 'init', array( $this, 'mbc_register_cpt' ) );
@@ -55,7 +61,7 @@ class MBC_Theme {
 	 *
 	 * @return void
 	 */
-	public function mbc_build_cpt( $cpt_slug, $singular_label, $plural_label, $supports = array(), $settings = array() ) {
+	public function mbc_build_cpt( $cpt_slug, $singular_label, $plural_label, $supports = array(), $settings = array(), $has_arch = true, $hier = true ) {
 
 		$labels = array(
 			'name'               => __( $singular_label, $this->post_type ),
@@ -83,11 +89,11 @@ class MBC_Theme {
 			'capability_type'    => 'page',
 			'taxonomies'         => array( 'category', 'post_tag' ),
 			'can_export'         => true,
-			'has_archive'        => $slug,
-			'hierarchical'       => true,
+			'has_archive'        => $has_arch,
+			'hierarchical'       => $hier,
 			'menu_position'      => null,
-			'rewrite'            => array( 'slug' => $cpt_slug, 'with_front' => false ),
-			'supports'           => $supports
+			'rewrite'            => array( 'slug' => $cpt_slug, 'with_front' => true ),
+			'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ) 
 		);
 
 		$this->cpts[$this->post_type] = array_merge( $args, $settings );
@@ -137,6 +143,7 @@ class MBC_Theme {
 			'hierarchical'      => true,
 			'labels'            => $labels,
 			'show_ui'           => true,
+			'show_in_menu'      => true,
 			'show_admin_column' => true,
 			'query_var'         => true
 		);
@@ -169,14 +176,9 @@ class MBC_Theme {
 	 *
 	 * @return void
 	 */
-	public static function mbc_list_titles( $post_type, $query_args = array(), $post_number = 10 ) {
+	public static function mbc_list_titles( $query_args = array() ) {
 
-		$default_args = array(
-			'post_type'      => $post_type,
-			'posts_per_page' => $post_number,
-		);
-
-		$args  = array_merge( $default_args, $query_args );
+		$args  = $query_args;
 
 		$query = new WP_Query( $args );
 
@@ -186,7 +188,7 @@ class MBC_Theme {
 
 				<?php while( $query->have_posts() ) : $query->the_post() ?>
 
-					<li><a href="<?php the_permalink() ?>"><?php the_title() ?></a></li>
+					<li><a href="<?php the_permalink() ?>"><span><?php the_title() ?></span></a></li>
 
 				<?php endwhile ?>
 
@@ -267,7 +269,7 @@ class MBC_Theme {
 	 *
 	 * @return bool
 	 */
-	static function cws_has_children() {
+	static function mbc_has_children() {
 		global $post;
 
 		$children = get_pages( array( 'child_of' => $post->ID ) );
@@ -285,17 +287,3 @@ class MBC_Theme {
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

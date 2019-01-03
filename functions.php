@@ -54,7 +54,8 @@ add_theme_support( 'menus' );
 function register_theme_menus() {
 	register_nav_menus(
 		array(
-			'header-menu'	=> __( 'Header Menu' )
+			'header-menu'	=> __( 'Header Menu' ),
+			'footer-menu'	=> __( 'Footer Menu' )
 		)
 	);
 }
@@ -130,6 +131,17 @@ function new_excerpt_more( $more ) {
 }
 
 add_filter( 'excerpt_more', 'new_excerpt_more' );
+
+/**
+ * Filter the except length to 20 words.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+function wpdocs_custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
 function my_acf_init() {
 	acf_update_setting('google_api_key', 'xxx');

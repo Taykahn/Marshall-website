@@ -1,21 +1,86 @@
 .footer {
-	background-color: $footer-grey;
+	background-color: $charcoal;
+}
+
+.social-icons {
+	padding-top: 30px;
+	@media ( max-width: 768px ) {
+		padding-top: 0px;
+	}
+	@media ( max-width: 414px ) {
+		padding-top: 30px;
+		.sfsi_widget {
+			padding-left: 31%;
+		}
+	}
+}
+
+
+.logo {
+	padding-top: 1em;
 	img {
-		padding-top: 1em;
+		width: 15%;
 		display: block;
-		margin: 0 auto;
+		margin: auto;
 	}
 }
 
 .copyright {
 	p {
-	background-color: $charcoal;
-	text-align: center;
 	padding-top: 3em;
 	padding-bottom: 3em;
 	color: $black;
+	text-align: center;
 	font-size: 10px;
 	margin: 0px;
 	font-weight: bold;
+	}
+}
+
+.bottomMenu {
+	@media ( min-width: 1279px ) {
+		padding-top: 45px;
+	}
+	display: block; 
+	width: 100%;
+
+	@media ( max-width: 414px ) {
+		text-align: center;
+	}
+
+	ul { 
+		display: inline;
+		padding-left: 0px;
+
+		li {
+			list-style-type: none; 
+			display: inline;
+			&:last-child > a {
+				border-right: none;
+			}
+
+			a {
+				color: $light-grey;
+				font-size: 13px;
+
+				@media ( min-width: 768px ) {
+					padding: 0px;
+				}
+
+				@media ( min-width: 1024px ) {
+					font-size: 15px;
+					letter-spacing: 2px;
+					line-height: 15px;
+					text-decoration: none;
+					font-weight: bold;
+					padding: 0 7px 0 0px;
+				}
+
+				&:hover {
+					color: $white;
+					text-decoration: underline;
+				}
+			}
+		}
 	}
 }

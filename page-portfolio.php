@@ -13,61 +13,65 @@ $post_id = $post->ID;
 
 <div id="nav-change">
 
-	<div class="container">
+	<div class="port-bkgd-img" style="background-image: url('<?php the_field( 'background_image_port_page') ?>')">
 
-		<div class="row">
+		<div class="container">
 
-			<div class="col-md-12">
+			<div class="row">
 
-				<div class="portfolio-page-header">
+				<div class="col-md-12">
 
-					<h1><?php the_title(); ?></h1>
+					<div class="portfolio-page-header">
 
-				</div><!-- .page-header --><hr>
+						<h1><?php the_title(); ?></h1>
 
-				<?php if( have_rows( 'portfolio', $post_id ) ): ?>
+					</div><!-- .page-header --><hr>
 
-					<?php while ( have_rows( 'portfolio', $post_id ) ) : the_row(); ?>
+					<?php if( have_rows( 'portfolio', $post_id ) ): ?>
 
-						<div class="col-md-12">
+						<?php while ( have_rows( 'portfolio', $post_id ) ) : the_row(); ?>
 
-							<div class="portfolio-title">
+							<div class="col-md-12">
 
-								<h2><?php the_sub_field( 'title', $post_id ); ?></h2>
+								<div class="portfolio-title">
 
-							</div><!-- .portfolio-title -->
+									<h2><?php the_sub_field( 'title', $post_id ); ?></h2>
 
-						</div><!-- .col-md-12 -->
+								</div><!-- .portfolio-title -->
 
-						<div class="col-md-6 web-content">
+							</div><!-- .col-md-12 -->
 
-							<div class="portfolio-img">
+							<div class="col-md-6 web-content">
 
-								<img src="<?php the_sub_field( 'image', $post_id ); ?>" />
+								<div class="portfolio-img">
 
-							</div><!-- .portfolio-img -->
+									<img src="<?php the_sub_field( 'image', $post_id ); ?>" />
 
-						</div><!-- .col-md-6 -->
+								</div><!-- .portfolio-img -->
 
-						<div class="col-md-6 web-content">
+							</div><!-- .col-md-6 -->
 
-							<div class="portfolio-content">
+							<div class="col-md-6 web-content">
 
-								<?php the_sub_field( 'content', $post_id ); ?>
+								<div class="portfolio-content">
 
-							</div><!-- .portfolio-content -->
+									<?php the_sub_field( 'content', $post_id ); ?>
 
-						</div><!-- .col-md-6 -->
+								</div><!-- .portfolio-content -->
 
-					<?php endwhile; ?>
+							</div><!-- .col-md-6 -->
 
-				<?php endif; ?>
+						<?php endwhile; ?>
 
-			</div><!-- .col-md-12 -->
+					<?php endif; ?>
 
-		</div><!-- .row -->
+				</div><!-- .col-md-12 -->
 
-	</div><!-- .container -->
+			</div><!-- .row -->
+
+		</div><!-- .container -->
+
+	</div><!-- .port-bkgd-img -->
 
 </div><!-- #nav-change -->
 

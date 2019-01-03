@@ -21,13 +21,25 @@
 
 						</div><!-- .page-header -->
 
-						<div class="sgl-pg-content">
+						<div class="col-sm-6">
 
-							<p><?php the_content(); ?></p>
+							<div class="sgl-pg-content">
 
-							<?php the_post_thumbnail(); ?>
+								<p><?php the_content(); ?></p>
 
-						</div><!-- .sgl-pg-content -->
+							</div><!-- .sgl-pg-content -->
+
+						</div><!-- .col-sm-6 -->
+
+						<div class="col-sm-6">
+
+							<div class="sgl-pg-thumbnail">
+
+								<?php the_post_thumbnail(); ?>
+
+							</div><!-- .sgl-pg-thumbnail -->
+
+						</div><!-- .col-sm-6 -->
 
 						<div class="image-section col-sm-12">
 

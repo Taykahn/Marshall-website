@@ -3,55 +3,65 @@
  * About Page
  */
 
-get_header(); ?>
+get_header(); 
+
+global $post;
+
+$post_id = $post->ID;
+
+?>
 
 <div id="nav-change">
 
-	<div class="container about-page">
+	<div class="about-bkgd-img" style="background-image: url('<?php the_field( 'background_image_about_page', $post_id ) ?>')">
 
-		<div class="row">
+		<div class="container about-page">
 
-			<div class="col-sm-12">
+			<div class="row">
 
-				<?php if ( have_posts() ) : ?>
+				<div class="col-sm-12">
 
-					<?php while ( have_posts() ) : the_post(); ?>
+					<?php if ( have_posts() ) : ?>
 
-						<div class="about-page-header">
+						<?php while ( have_posts() ) : the_post(); ?>
 
-							<h1><?php the_title(); ?></h1>
+							<div class="about-page-header">
 
-						</div><!-- .page-header -->
+								<h1><?php the_title(); ?></h1>
 
-						<div class="col-sm-6">
+							</div><!-- .page-header -->
 
-							<div class="about-img">
+							<div class="col-sm-6">
 
-								<?php the_post_thumbnail(); ?>
+								<div class="about-img">
 
-							</div><!-- .contact-img -->
+									<?php the_post_thumbnail(); ?>
 
-						</div><!-- .col-sm-6 -->
+								</div><!-- .contact-img -->
 
-						<div class="col-sm-6">
+							</div><!-- .col-sm-6 -->
 
-							<div class="about-content">
+							<div class="col-sm-6">
 
-								<?php the_content(); ?>
+								<div class="about-content">
 
-							</div><!-- .contact-content -->
+									<?php the_content(); ?>
 
-						</div><!-- .col-sm-6 -->
+								</div><!-- .contact-content -->
 
-					<?php endwhile; ?>
+							</div><!-- .col-sm-6 -->
 
-				<?php endif; ?>
+						<?php endwhile; ?>
 
-			</div><!-- .col-sm-12 -->
+					<?php endif; ?>
 
-		</div><!-- .row -->
+				</div><!-- .col-sm-12 -->
 
-	</div><!-- .container -->
+			</div><!-- .row -->
+
+		</div><!-- .container -->
+
+	</div><!--.about-bkgd-img --> 
 
 </div><!-- #nav-change -->
 

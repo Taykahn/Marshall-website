@@ -6,29 +6,59 @@
 
 </main>
 
-	<footer class="footer">
+	<footer>
 
-		<?php if ( is_front_page() ) { ?>
+		<div class="container footer">
 
-			<a href="#top"><img src="<?php the_field( 'arrow_up', 'option' ) ?>"></a>
+			<div class="row">
 
-		<?php } else { ?>
+				<div class="col-sm-4">
 
-		<?php } ?>
+					<div class="social-icons">
 
-		<section class="one-column row no-pad">
+						<?php the_field( 'social_icons', 'options' ); ?>
 
-			<div class="copyright">
+					</div><!-- .social-icons -->
 
-				<p>&copy; <?php bloginfo('name'); ?> <?php echo date('Y'); ?></p>
+					<div class="footer-navbar">
 
-			</div><!-- .copyright -->
+						<?php include( 'includes/footer-navbar.php' ); ?>
 
-		</section><!-- .two-column -->
+					</div><!-- .footer-navbar -->
 
-	</footer><!-- .footer -->
+				</div><!-- .col-sm-4 -->
+
+				<div class="col-sm-4">
+
+					<div class="logo">
+
+						<img src="<?php the_field( 'logo', 'option' ) ?>">
+
+					</div><!-- .logo -->
+
+					<div class="copyright">
+
+						<p>&copy; <?php bloginfo('name'); ?> <?php echo date('Y'); ?></p>
+
+					</div><!-- .copyright -->
+
+				</div><!-- .col-sm-4 -->
+
+				<div class="col-sm-4">
+
+				</div><!-- .col-sm-4 -->
+
+			</div><!-- .row -->
+
+		</div><!-- .container -->
+
+	</footer>
 
 	<?php wp_footer(); ?>
+
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+	<script> AOS.init(); </script>
 
 </body>
 

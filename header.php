@@ -12,6 +12,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="<?php bloginfo('template_directory');?>/images/favicon.ico">
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 	<title>
 
@@ -40,21 +41,15 @@
 
 <body <?php body_class( $classes ) ?>>
 
-<div id="top">
+<div id="top"></div><!-- #top -->
 
 	<nav class="navbar navbar-default navbar-fixed-top navbar-lg">
-
-		<div class="container">
-
-			<div class="navbar-header">
-
-			</div><!-- .navbar-header -->
 
 			<div id="navbar" class="navbar-collapse collapse">
 
 				<?php 
 					$args = array(
-					'menu'          => 'header-menu',
+					'menu'          => 'menu-1',
 					'menu_class'    => 'nav navbar-nav',
 					'container'     => 'false'
 				);
@@ -71,8 +66,6 @@
 
 	</div><!-- #navbar-sm -->
 
-</div><!-- #top -->
-
 <header>
 
 	<div class="header">
@@ -85,11 +78,11 @@
 
 					<div class="site-name">
 
+						<img src="<?php the_field( 'logo', 'option' ) ?>">
+
 						<h1><?php the_field( 'name', 'option' ); ?></h1>
 
 						<p><?php the_field( 'description', 'option' ); ?></p>
-
-						<a href="#frontpage"><img src="<?php the_field( 'chevron_img', 'option' ) ?>"></a>
 
 					</div><!-- .site-name -->
 

@@ -57,6 +57,13 @@
 
 /* Sidebar nav styles -------------------------------------*/
 
+.navbar-sm-soc-icons {
+	@media ( max-width: 768px ) {
+		padding-top: 24em;
+		padding-left: 16%;
+	}
+}
+
 .sidebar-nav {
 	position: absolute;
 	top: 0;
@@ -311,6 +318,11 @@
 	}
 }
 
+.navbar-default {
+	background-color: transparent;
+	border-color: transparent;
+}
+
 .navbar-default
 .navbar-nav > li > a {
 	color: $black;
@@ -363,12 +375,6 @@
 	@media ( max-width: 1024px ) {
 		font-size: 20px;
 	}
-}
-
-.current-menu-item > a, 
-.current-menu-parent > a {
-	background: $another-grey;
-	border-radius: 5px;
 }
 
 .current-menu-parent li a {
